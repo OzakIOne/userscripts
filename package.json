@@ -1,23 +1,20 @@
 {
-  "name": "shazamlinks",
-  "version": "1.0.0",
-  "description": "userscript on shazam.com to add youtube, spotify, deezer search",
-  "main": "src/shazamlinks.user.ts",
-  "scripts": {
-    "build": "tsc --noEmit && swc src/ --only *.ts -d src",
-    "dev": "chokidar 'src/*.ts' -c 'pnpm run build'",
-    "watch": "swc src/*.ts -d src/ --watch",
-    "prettier": "prettier src/**/*.ts --write",
-    "lint": "eslint src/**/*.ts --fix"
-  },
-  "devDependencies": {
-    "@swc/cli": "^0.1.62",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "chokidar": "^3.5.3",
-    "chokidar-cli": "^3.0.0",
-    "eslint": "^8.44.0",
-    "prettier": "^3.0.0",
-    "typescript": "^5.1.6"
-  }
+	"name": "userscripts",
+	"scripts": {
+		"dev": "pnpm --stream -r run dev",
+		"build": "pnpm --stream -r run build",
+		"watch": "pnpm --stream -r run watch",
+		"lint": "pnpm --stream -r run lint",
+		"prettier": "pnpm --stream -r run prettier"
+	},
+	"devDependencies": {
+		"@swc/cli": "^0.1.62",
+		"@typescript-eslint/eslint-plugin": "^6.2.0",
+		"@typescript-eslint/parser": "^6.2.0",
+		"chokidar": "^3.5.3",
+		"chokidar-cli": "^3.0.0",
+		"eslint": "^8.45.0",
+		"prettier": "^3.0.0",
+		"typescript": "^5.1.6"
+	}
 }

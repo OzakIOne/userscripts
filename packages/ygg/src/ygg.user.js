@@ -7,7 +7,7 @@
 // @author      ozaki
 // @description 17/06/2023 01:19:37
 // @homepageURL https://github.com/OzakIOne/userscripts/
-// @updateURL   https://github.com/OzakIOne/userscripts/blob/master/packages/ygg/src/shazamlinks.user.js
+// @updateURL   https://github.com/OzakIOne/userscripts/blob/master/packages/ygg/src/ygg.user.js
 // ==/UserScript==
 const interval = setInterval(()=>{
     let tbody, child;
@@ -16,6 +16,6 @@ const interval = setInterval(()=>{
         seed && '0' === seed.innerText && (child.style.display = 'none');
     }), clearInterval(interval));
 }, 50);
-l(interval);
+nterval);
     }();
 }, 50);

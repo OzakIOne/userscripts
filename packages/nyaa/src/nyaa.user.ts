@@ -7,7 +7,7 @@
 // @author      ozaki
 // @description 17/06/2023 01:19:37
 // @homepageURL https://github.com/OzakIOne/userscripts/
-// @updateURL   https://github.com/OzakIOne/userscripts/blob/master/packages/nyaa/src/shazamlinks.user.js
+// @updateURL   https://github.com/OzakIOne/userscripts/blob/master/packages/nyaa/src/nyaa.user.js
 // ==/UserScript==
 
 function run() {
@@ -19,5 +19,5 @@ function run() {
 }
 
 const interval = setInterval(() => {
-  if (document.querySelector('h1.title')) run();
+  if (document.querySelector('tbody > *')) run();
 }, 50);

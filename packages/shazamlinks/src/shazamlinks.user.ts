@@ -7,7 +7,7 @@
 // @author      ozaki
 // @description 17/06/2023 01:19:37
 // @homepageURL https://github.com/OzakIOne/userscripts/
-// @updateURL   https://github.com/OzakIOne/userscripts/blob/master/src/shazamlinks.user.js
+// @updateURL   https://github.com/OzakIOne/userscripts/blob/master/packages/shazamlinks/src/shazamlinks.user.js
 // ==/UserScript==
 
 function run() {

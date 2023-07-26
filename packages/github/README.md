@@ -4,7 +4,7 @@ userscript on [Github Trending](https://github.com/trending) to remove already s
 
 install [violentmonkey](https://violentmonkey.github.io/get-it/#webextension-compatible-browsers)
 
-click on the link to install: [github.user.js](src/github.user.js)
+click on the link to install: [github.user.js](src/github.user.js?raw=1)
 
 ## Development
 

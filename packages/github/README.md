@@ -1,4 +1,4 @@
-# ygg
+# github
 
 userscript on [Github Trending](https://github.com/trending) to remove already starred repo
 

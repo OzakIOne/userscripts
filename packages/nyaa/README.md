@@ -1,4 +1,4 @@
-# ygg
+# nyaa
 
 userscript on nyaa.si to remove torrents with 0 seeds
 

@@ -1,8 +1,8 @@
 {
-  "name": "@userscripts/shazamlinks",
+  "name": "@userscripts/nyaa",
   "version": "1.0.0",
-  "description": "userscript on shazam.com to add youtube, spotify, deezer search",
-  "main": "src/shazamlinks.user.ts",
+  "description": "userscript on nyaa.si to remove torrents with 0 seeds",
+  "main": "src/nyaa.user.ts",
   "scripts": {
     "build": "tsc --noEmit && swc src/ --only *.ts -d src",
     "dev": "chokidar 'src/*.ts' -c 'pnpm run build'",

@@ -10,12 +10,11 @@
 // @updateURL   https://github.com/OzakIOne/userscripts/blob/master/packages/ygg/src/ygg.user.js
 // ==/UserScript==
 const interval = setInterval(()=>{
-    let tbody, child;
-    document.querySelector('h1.title') && (tbody = document.querySelectorAll('tbody')[1], child = tbody?.childNodes, child?.forEach((child)=>{
-        let seed = child.childNodes[15];
-        seed && '0' === seed.innerText && (child.style.display = 'none');
-    }), clearInterval(interval));
-}, 50);
-nterval);
+    document.querySelector('tbody') && function() {
+        let tbody = document.querySelectorAll('tbody')[1], child = tbody?.childNodes;
+        child?.forEach((child)=>{
+            let seed = child.childNodes[15];
+            seed && '0' === seed.innerText && (child.style.display = 'none');
+        }), clearInterval(interval);
     }();
 }, 50);

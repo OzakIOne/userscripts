@@ -10,11 +10,10 @@
 // @updateURL   https://github.com/OzakIOne/userscripts/blob/master/packages/nyaa/src/nyaa.user.js
 // ==/UserScript==
 const interval = setInterval(()=>{
-    document.querySelector('h1.title') && (document.querySelectorAll('tbody > *').forEach((row)=>{
-        row.childNodes[11]?.textContent === '0' && row.remove();
-    }), clearInterval(interval));
-}, 50);
-w.remove();
+    document.querySelector('tbody > *') && function() {
+        let tbodys = document.querySelectorAll('tbody > *');
+        tbodys.forEach((row)=>{
+            row.childNodes[11]?.textContent === '0' && row.remove();
         }), clearInterval(interval);
     }();
 }, 50);

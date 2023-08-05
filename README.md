@@ -6,3 +6,4 @@ a monorepo that host all my developed userscripts
 - [YGG](packages/ygg/)
 - [Nyaa](packages/nyaa/)
 - [Github](packages/github/)
+- [Leboncoin](packages/leboncoin/)

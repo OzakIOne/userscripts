@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://www.shazam.com/*
 // @grant       none
-// @version     2.2
+// @version     2.3
 // @author      ozaki
 // @description 17/06/2023 01:19:37
 // @homepageURL https://github.com/OzakIOne/userscripts/
@@ -11,16 +11,23 @@
 // ==/UserScript==
 
 function run() {
-  const title = document.querySelector('h1.title') as HTMLHeadingElement;
-  const artist = document.querySelector('h2.artist') as HTMLHeadingElement;
+  const title = document.querySelector('div > h1') as HTMLHeadingElement;
+  const artist = document.querySelector('div > h2') as HTMLHeadingElement;
 
   function createElement(text: string, url: string, color: string) {
     const element = document.createElement('div');
-    const classNames = ['action', 'flex-reset', 'btn', 'share', 'popup-btn', 'popup-inline'];
+    const classNames = [
+      'TrackPageHeader_action__dOiuH',
+      'Button-module_container__WuvCi',
+      'Button-module_shapePill__St97o',
+      'Button-module_paddingBase__-mzTv',
+    ];
 
     element.classList.add(...classNames);
     element.innerText = text;
     element.style.backgroundColor = color;
+    element.style.flexBasis = 'auto';
+    element.style.flexGrow = '0';
 
     element.addEventListener('click', () => window.open(url, '_blank'));
 
@@ -48,8 +55,7 @@ function run() {
     '#FF5500',
   );
 
-  const container = document?.querySelector('.flex-reset.btn.share.popup-btn.popup-inline')
-    ?.parentNode;
+  const container = document?.querySelector('div[data-section="header"]')?.nextElementSibling;
   container?.appendChild(youtube);
   container?.appendChild(spotify);
   container?.appendChild(deezer);
@@ -59,5 +65,5 @@ function run() {
 }
 
 const interval = setInterval(() => {
-  if (document.querySelector('h1.title')) run();
+  if (document.querySelector('div > h1')) run();
 }, 50);

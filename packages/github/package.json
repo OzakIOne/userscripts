@@ -1,10 +1,11 @@
 {
   "name": "@userscripts/github",
-  "version": "1.0.0",
+  "version": "1.1",
   "description": "userscript on Github Trending to remove already starred repo",
   "main": "src/github.user.ts",
   "scripts": {
     "build": "tsc --noEmit && swc src/ --only *.ts -d src",
+    "ts": "tsc",
     "dev": "chokidar 'src/*.ts' -c 'pnpm run build'",
     "watch": "swc src/*.ts -d src/ --watch",
     "prettier": "prettier src/**/*.ts --write",

@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://nyaa.si/*
 // @grant       none
-// @version     1.0
+// @version     1.1
 // @author      ozaki
 // @description 17/06/2023 01:19:37
 // @homepageURL https://github.com/OzakIOne/userscripts/

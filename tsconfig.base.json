@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    "module": "ESNext",
     "allowUnreachableCode": false, /* Disable error reporting for unreachable code. */
     "allowUnusedLabels": false, /* Disable error reporting for unused labels. */
     "esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */
@@ -20,6 +21,8 @@
     "strictFunctionTypes": true, /* When assigning functions, check to ensure parameters and the return values are subtype-compatible. */
     "strictNullChecks": true, /* When type checking, take into account 'null' and 'undefined'. */
     "strictPropertyInitialization": true, /* Check for class properties that are declared but not set in the constructor. */
-    "useUnknownInCatchVariables": true /* Default catch clause variables as 'unknown' instead of 'any'. */
-  }
+    "useUnknownInCatchVariables": true, /* Default catch clause variables as 'unknown' instead of 'any'. */
+    "declaration": false,
+    "removeComments": false,
+  },
 }

@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       *://*.yggtorrent.*/engine/search*
 // @grant       none
-// @version     2.2
+// @version     2.3
 // @author      ozaki
 // @description 17/06/2023 01:19:37
 // @homepageURL https://github.com/OzakIOne/userscripts/
@@ -12,11 +12,12 @@
 
 function run() {
   const tbody = document.querySelectorAll('tbody')[1];
-  const child = tbody?.childNodes as NodeListOf<HTMLElement>;
+  const children = tbody?.childNodes;
 
-  child?.forEach((child) => {
-    const seed = child.childNodes[15] as HTMLElement;
-    if (seed && seed.innerText === '0') child.style.display = 'none';
+  children?.forEach((child) => {
+    const element = child as HTMLElement;
+    const seed = element.childNodes[15] as HTMLElement;
+    if (seed && seed.innerText === '0') element.style.display = 'none';
   });
 
   clearInterval(interval);

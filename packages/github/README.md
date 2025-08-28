@@ -8,8 +8,6 @@ click on the link to install: [github.user.js](src/github.user.js?raw=1)
 
 ## Development
 
-`watch` script doesn't work have typecheck
+`dev` runs tsc watch
 
 `build` typecheck and build
-
-`dev` watch for changes and execute `build`

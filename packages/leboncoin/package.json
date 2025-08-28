@@ -4,10 +4,8 @@
   "description": "userscript on leboncoin to remove already selled items",
   "main": "src/leboncoin.user.ts",
   "scripts": {
-    "build": "tsc --noEmit && swc src/ --only *.ts -d src",
-    "ts": "tsc",
-    "dev": "chokidar 'src/*.ts' -c 'pnpm run build'",
-    "watch": "swc src/*.ts -d src/ --watch",
+    "build": "tsc",
+    "dev": "tsc --watch",
     "prettier": "prettier src/**/*.ts --write",
     "lint": "eslint src/**/*.ts --fix"
   }

@@ -10,8 +10,6 @@ click on the link to install: [shazamlinks.user.js](src/shazamlinks.user.js?raw=
 
 ## Development
 
-`watch` script doesn't work have typecheck
+`dev` runs tsc watch
 
 `build` typecheck and build
-
-`dev` watch for changes and execute `build`

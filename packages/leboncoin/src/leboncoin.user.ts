@@ -3,7 +3,7 @@
 // @namespace   Violentmonkey Scripts
 // @match       https://www.leboncoin.fr/recherche*
 // @grant       none
-// @version     1.1
+// @version     1.2
 // @author      ozaki
 // @description 17/06/2023 01:19:37
 // @homepageURL https://github.com/OzakIOne/userscripts/
@@ -11,14 +11,14 @@
 // ==/UserScript==
 
 function run() {
-  const itemsWithTag = document.querySelectorAll('div > span.bg-neutral-container');
-  const itemsArray = Array.from(itemsWithTag) as HTMLSpanElement[];
+  const itemsWithTag = [
+    ...document.querySelectorAll('[data-spark-component="tag"]'),
+  ] as HTMLElement[];
 
-  const selledItems = itemsArray.filter((item) => item.innerText === 'Vendu');
+  const selledItems = itemsWithTag.filter((item) => item.innerText === 'Vendu');
 
   selledItems.forEach((item) => {
-    const parent = item.closest('div.styles_adCard__HQRFN.styles_classified__rnsg4');
-    console.log('parent', parent);
+    const parent = item.closest('article');
     if (parent) parent.remove();
   });
 
@@ -26,5 +26,5 @@ function run() {
 }
 
 const interval = setInterval(() => {
-  if (document.querySelector('div.src__Box-sc-10d053g-0.jISaOx')) run();
+  if (document.querySelector('main')) run();
 }, 50);
